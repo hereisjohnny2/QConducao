@@ -50,6 +50,8 @@ Para o cálculo do fluxo de calor que foi conduzido pelo material deve se entrar
 
 ## Diagramas de Classes
 
+![Classes](Diagramas/DiagramaClasses.png)
+
 ### CReta
 
 ![CReta](Diagramas/CReta.png)
@@ -73,3 +75,7 @@ Para o cálculo do fluxo de calor que foi conduzido pelo material deve se entrar
 ### CCondutividade
 
 ![CCondutividade](Diagramas/CCondutividade.png)
+
+## Casos de Uso
+
+![CCondutividade](Diagramas/CasosUso.png)
