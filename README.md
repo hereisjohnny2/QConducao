@@ -1,6 +1,6 @@
 # QConducao
 
-Resolução da Prova 1 referente a disciplina de Desenvolvimento de Software Orientado a Objeto em C++
+Resolução da Prova 1 referente a disciplina de Desenvolvimento de Software Orientado a Objeto em C++. Os diagramas referentes classes e aos casos de uso podem ser encontrados na pasta **Diagramas** e podem ser abertos com o Umbrello.
 
 ## Compilação e Execução
 
@@ -42,8 +42,34 @@ Quando todos os dados já estiverem sido inseridos basta clicar em _Criar Curva_
 
 Também é possivel salvar as equações que formam cada reta. Para isso, clicar em _Arquivo_ e depois _Salvar Equacoes_.
 
-OS Gráficos também podem ser salvos em _Gráfico_ e em seguida clicando em _Salvar Gráfico_.
+Os gráficos também podem ser salvos em _Gráfico_ e em seguida clicando em _Salvar Gráfico_.
 
 Para o cálculo do fluxo de calor que foi conduzido pelo material deve se entrar com os valores de temperatura, área, comprimento (dx) e variação de temperatura (dt) e também com o nome do material. Em seguida clicar em _Calcular_.
 
 ![Calculo Calor](imagens/CalculoCalor.png)
+
+## Diagramas de Classes
+
+### CReta
+
+![CReta](Diagramas/CReta.png)
+
+### CSegmentoReta
+
+![CSegmentoReta](Diagramas/CSegmentoReta.png)
+
+### CInterpolacao
+
+![CInterpolacao](Diagramas/CInterpolacao.png)
+
+### QConducao
+
+![QConducao](Diagramas/QConducao.png)
+
+### CFluxoCalor
+
+![CFluxoCalor](Diagramas/CFluxoCalor.png)
+
+### CCondutividade
+
+![CCondutividade](Diagramas/CCondutividade.png)

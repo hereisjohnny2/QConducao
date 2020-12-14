@@ -11,8 +11,9 @@
 #include "CCondutividade.hpp"
 #include "CFluxoCalor.hpp"
 
-namespace Ui {
-class QConducao;
+namespace Ui
+{
+    class QConducao;
 }
 
 class QConducao : public QMainWindow
@@ -32,6 +33,7 @@ private:
 private:
     /// Carrega as informações dos materiais contidas em um diretório, atualiza a lista da combobox de materiai, preenche a tabela e atualiza o grafico
     void CarregarDados(QString _caminhoDados);
+    /// Atualiza a curva com todos os gráficos de todos os materiais
     void AtualizaGraficoGeral();
 
 private slots:
