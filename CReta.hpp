@@ -25,8 +25,6 @@ public:
     CReta(double x1, double y1, double x2, double y2) : b{(y2 - y1) / (x2 - x1)}, a{y1 - b * x1} {}
     /// Construtor de cópia.
     CReta(const CReta &reta) = default;
-    /// Construtor move.
-    CReta(CReta &&) = default;
     /// Destrutor.
     ~CReta() = default;
 
