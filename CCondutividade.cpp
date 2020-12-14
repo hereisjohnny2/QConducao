@@ -68,25 +68,27 @@ void CCondutividade::Plot(QCustomPlot *grafico)
 
     for (auto material = data.begin(); material != data.end(); ++material)
     {
-        QVector<double> vx, vy;
-
-        estiloCurva.setColor(QColor(dist(rand),dist(rand),dist(rand),255));
-        estiloCurva.setWidth(2);
-
-        grafico->addGraph();
-        for (auto &reta : material->second->Retas())
+        if (!material->second->Retas().empty())
         {
-            vx.push_back(reta->Xmin());
-            vy.push_back(reta->Fx(reta->Xmin()));
+            QVector<double> vx, vy;
+
+            estiloCurva.setColor(QColor(dist(rand),dist(rand),dist(rand),255));
+            estiloCurva.setWidth(2);
+
+            grafico->addGraph();
+            for (auto &reta : material->second->Retas())
+            {
+                vx.push_back(reta->Xmin());
+                vy.push_back(reta->Fx(reta->Xmin()));
+            }
+            vx.push_back(material->second->Retas().back()->Xmax());
+            vy.push_back(material->second->Retas().back()->Fx(material->second->Retas().back()->Xmax()));
+
+            grafico->graph(grafico->graphCount() - 1)->setData(vx, vy);
+            grafico->graph(grafico->graphCount() - 1)->setName(QString::fromStdString(material->first));
+
+            grafico->graph(grafico->graphCount() - 1)->setPen(estiloCurva);
         }
-        vx.push_back(material->second->Retas().back()->Xmax());
-        vy.push_back(material->second->Retas().back()->Fx(material->second->Retas().back()->Xmax()));
-
-        grafico->graph(grafico->graphCount() - 1)->setData(vx, vy);
-        grafico->graph(grafico->graphCount() - 1)->setName(QString::fromStdString(material->first));
-
-        grafico->graph(grafico->graphCount() - 1)->setPen(estiloCurva);
-
     }
     grafico->legend->setVisible(true);
 }
